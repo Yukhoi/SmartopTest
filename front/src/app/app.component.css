@@ -1,0 +1,27 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background: #f0f0f0;
+    overflow: auto;
+    padding: 0;
+  }
+
+  .btn {
+    margin-bottom: 1rem;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+    height: 8rem;
+    padding: 0 1.2rem;
+    position: relative;
+    background-color: rgb(62, 62, 223);
+  }
+  
+  .listes {
+    display: flex;
+    margin-top: 1rem;
+  }
