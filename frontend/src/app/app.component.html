@@ -103,8 +103,8 @@
 
 
 
-          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-          <tr mat-row *matRowDef="let surgeons; columns: displayedColumns"></tr>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true" class="table--header"></tr>
+          <tr mat-row *matRowDef="let surgeons; columns: displayedColumns" class="table--body"></tr>
         </table>
 
         </mat-card-content>

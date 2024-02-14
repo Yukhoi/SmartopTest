@@ -18,10 +18,27 @@
     height: 8rem;
     padding: 0 1.2rem;
     position: relative;
-    background-color: rgb(62, 62, 223);
+    background-color: rgb(255, 255, 255);
   }
   
   .listes {
     display: flex;
     margin-top: 1rem;
+  }
+
+  .table{
+    height: 400px;
+    overflow: auto;    
+  }
+
+  ::ng-deep .table--header {
+    z-index: 20;
+    opacity: 1;
+    background-color: rgb(201, 197, 197) !important;
+    font-weight: bold !important; /* Added font-weight property */
+
+  }
+
+  .table--body {
+    z-index: 5;
   }
