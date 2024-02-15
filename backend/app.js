@@ -1,13 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 
-
 const app = express();
 app.use(cors());
 
 
 const mongoose = require('mongoose');
 
+// Connect to the database
 mongoose.connect('mongodb+srv://cluster0.rbrla8m.mongodb.net/',
     {
     dbName: 'intervention',
@@ -16,22 +16,14 @@ mongoose.connect('mongodb+srv://cluster0.rbrla8m.mongodb.net/',
     })
 .then(() => {
     console.log('Connected to database');
-    console.log('Database Name: ', mongoose.connection.db.databaseName);
-    console.log('Host Name: ', mongoose.connection.host);
 })
 .catch((error) => {
     console.log(error);
 });
 
-
+// Routes
 const interventionRoutes = require('./Routes/Intervention.route');
 app.use('/api/interventions', interventionRoutes);
-
-app.use((req, res, next) => {
-    const error = new Error('Not found');
-    error.status = 404;
-    next(error);
-});
 
 //error handler
 app.use((err, req, res, next) => {
