@@ -6,6 +6,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 import { MatSort, Sort } from '@angular/material/sort';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 /**
@@ -41,6 +42,9 @@ export class AppComponent {
 
   displayedColumns: string[] = ['name', 'speciality', 'interventionCount', 'favoriteAnesthetist', 'favoriteNurse', 'mostFrequentRoom', 'mostFrequentProcedure'];
 
+  // Paginator used for the table
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+
   // Sort used for the table
   @ViewChild(MatSort, { static: true }) sort !: MatSort;
 
@@ -64,6 +68,7 @@ export class AppComponent {
         // Set the list of surgeons to the data retrieved from the server.
         this.surgeons = data;
         this.dataSource = new MatTableDataSource(this.surgeons);
+        this.dataSource.paginator = this.paginator;
         this.dataSource.sortingDataAccessor = (item: Surgeon, property: string) => {
           switch (property) {
             case 'name':
@@ -110,6 +115,7 @@ export class AppComponent {
             // Update the surgeons and data source.
             this.surgeons = data;
             this.dataSource = new MatTableDataSource(this.surgeons);
+            this.dataSource.paginator = this.paginator;
             this.dataSource.sortingDataAccessor = (item: Surgeon, property: string) => {
               switch (property) {
                 case 'name':

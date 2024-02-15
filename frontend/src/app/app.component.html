@@ -121,6 +121,12 @@
         <tr mat-row *matRowDef="let surgeons; columns: displayedColumns" class="table--body"></tr>
       </table>
 
+      <!-- <mat-paginator
+          [pageSizeOptions]="[10]"
+          showFirstLastButtons
+          [length]="dataSource && dataSource.data.length"
+        ></mat-paginator> -->
+
       </mat-card-content>
   </div>
 </div>

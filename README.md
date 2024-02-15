@@ -11,7 +11,7 @@ Pour démarrer l'application il faut avoir préalablement installé Node.js, Ang
 ## Ouverture de l'application
 
 Veuillez ouvrir les scripts `launch-backend.sh` et `launch-frontend.sh` séparément, ou utilise les commandes 
-Pour backend: 
+pour backend: 
 ```bash
 cd backend
 npm start
