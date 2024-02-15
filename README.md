@@ -24,3 +24,10 @@ ng serve
 
 Puis rendez-vous sur le port 4200 de votre server local ou avec l'URL :
 ###### http://localhost:4200
+
+Lorsque vous accédez à l'application, la page affiche automatiquement tous les noms des chirurgiens et les informations connexes dans un tableau. \
+![image](ecran.jpg)
+
+Lorsque vous saisissez le nom d'un chirurgien dans le champ de recherche situé en haut du formulaire, les informations relatives au chirurgien correspondant s'affichent automatiquement.\
+![image](ecran recherche.jpg)
+
